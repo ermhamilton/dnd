@@ -1,7 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Skill.create!([
+  {name: "Athletics", ability_type: "STR"},
+  {name: "Acrobatics", ability_type: "DEX"},
+  {name: "Animal Handling", ability_type: "WIS"},
+  {name: "Arcana", ability_type: "INT"},
+  {name: "Deception", ability_type: "CHA"},
+  {name: "History", ability_type: "INT"},
+  {name: "Insight", ability_type: "WIS"},
+  {name: "Intimidation", ability_type: "CHA"},
+  {name: "Investigation", ability_type: "INT"},
+  {name: "Medicine", ability_type: "WIS"},
+  {name: "Nature", ability_type: "INT"},
+  {name: "Perception", ability_type: "WIS"},
+  {name: "Performance", ability_type: "CHA"},
+  {name: "Persuasion", ability_type: "CHA"},
+  {name: "Religion", ability_type: "INT"},
+  {name: "Sleight of Hand", ability_type: "DEX"},
+  {name: "Stealth", ability_type: "DEX"},
+  {name: "Survival", ability_type: "WIS"}
+])

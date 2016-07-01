@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630223232) do
+ActiveRecord::Schema.define(version: 20160701004622) do
+
+  create_table "backgrounds", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "skill_proficiencies"
+    t.string   "tool_proficiencies"
+    t.string   "languages"
+    t.text     "equipment"
+    t.text     "feature"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "backgrounds_skills", id: false, force: true do |t|
+    t.integer "skill_id",      null: false
+    t.integer "background_id", null: false
+  end
 
   create_table "casein_admin_users", force: true do |t|
     t.string   "login",                           null: false
