@@ -59,7 +59,7 @@ module Casein
     private
       
       def background_params
-        params.require(:background).permit(:name, :description, :skill_proficiencies, :tool_proficiencies, :languages, :equipment, :feature, skill_ids:[])
+        params.require(:background).permit(:name, :description, :tool_proficiencies, :languages, :equipment, :feature, skill_ids:[])
       end
 
   end

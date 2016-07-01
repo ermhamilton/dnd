@@ -1,3 +1,31 @@
+Ability.create!([
+  {name: "Strength", abbreviation: "STR"},
+  {name: "Dexterity", abbreviation: "DEX"},
+  {name: "Constitution", abbreviation: "CON"},
+  {name: "Intelligence", abbreviation: "INT"},
+  {name: "Wisdom", abbreviation: "WIS"},
+  {name: "Charisma", abbreviation: "CHA"}
+])
+Ability::HABTM_Skills.create!([
+  {ability_id: 2, skill_id: 2},
+  {ability_id: 5, skill_id: 3},
+  {ability_id: 4, skill_id: 4},
+  {ability_id: 1, skill_id: 1},
+  {ability_id: 6, skill_id: 5},
+  {ability_id: 4, skill_id: 6},
+  {ability_id: 5, skill_id: 7},
+  {ability_id: 6, skill_id: 8},
+  {ability_id: 4, skill_id: 9},
+  {ability_id: 5, skill_id: 10},
+  {ability_id: 4, skill_id: 11},
+  {ability_id: 5, skill_id: 12},
+  {ability_id: 6, skill_id: 13},
+  {ability_id: 6, skill_id: 14},
+  {ability_id: 4, skill_id: 15},
+  {ability_id: 2, skill_id: 16},
+  {ability_id: 2, skill_id: 17},
+  {ability_id: 5, skill_id: 18}
+])
 Skill.create!([
   {name: "Athletics", ability_type: "STR"},
   {name: "Acrobatics", ability_type: "DEX"},
@@ -17,4 +45,24 @@ Skill.create!([
   {name: "Sleight of Hand", ability_type: "DEX"},
   {name: "Stealth", ability_type: "DEX"},
   {name: "Survival", ability_type: "WIS"}
+])
+Skill::HABTM_Abilities.create!([
+  {ability_id: 2, skill_id: 2},
+  {ability_id: 5, skill_id: 3},
+  {ability_id: 4, skill_id: 4},
+  {ability_id: 1, skill_id: 1},
+  {ability_id: 6, skill_id: 5},
+  {ability_id: 4, skill_id: 6},
+  {ability_id: 5, skill_id: 7},
+  {ability_id: 6, skill_id: 8},
+  {ability_id: 4, skill_id: 9},
+  {ability_id: 5, skill_id: 10},
+  {ability_id: 4, skill_id: 11},
+  {ability_id: 5, skill_id: 12},
+  {ability_id: 6, skill_id: 13},
+  {ability_id: 6, skill_id: 14},
+  {ability_id: 4, skill_id: 15},
+  {ability_id: 2, skill_id: 16},
+  {ability_id: 2, skill_id: 17},
+  {ability_id: 5, skill_id: 18}
 ])

@@ -59,7 +59,7 @@ module Casein
     private
       
       def skill_params
-        params.require(:skill).permit(:name, :ability_type)
+        params.require(:skill).permit(:name, :ability_ids)
       end
 
   end

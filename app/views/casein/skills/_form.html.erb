@@ -6,6 +6,12 @@
 		<%= casein_text_field f, f.object, :name %>
 	</div>
 	<div class="col-lg-6">
-		<%= casein_select f, f.object, :ability_type, ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'] %>
+<%= f.label "Ability Type" %><br />
+<%= f.collection_check_boxes :ability_ids, Ability.all, :id, :name do |b| %>
+    	<div class="collection-check-box">
+	      <%= b.check_box %>
+	      <%= b.label %>
+	    </div>
+  <% end %>
 	</div>
 </div>

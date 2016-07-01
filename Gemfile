@@ -39,3 +39,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'casein', '~>5.1.1'
+gem 'seed_dump'
