@@ -11,13 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160701012527) do
+ActiveRecord::Schema.define(version: 20160701030516) do
 
   create_table "abilities", force: true do |t|
     t.string   "name"
     t.string   "abbreviation"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "abilities_job_classes", id: false, force: true do |t|
+    t.integer "job_class_id", null: false
+    t.integer "ability_id",   null: false
   end
 
   create_table "abilities_skills", id: false, force: true do |t|
@@ -62,6 +67,45 @@ ActiveRecord::Schema.define(version: 20160701012527) do
     t.string   "time_zone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "job_classes", force: true do |t|
+    t.string   "name"
+    t.boolean  "caster"
+    t.string   "saving_throws"
+    t.string   "skill_proficiencies"
+    t.string   "hit_dice"
+    t.string   "armor_proficiencies"
+    t.string   "weapon_proficiencies"
+    t.string   "tool_proficiencies"
+    t.text     "equipment"
+    t.text     "level_1_features"
+    t.text     "level_2_features"
+    t.text     "level_3_features"
+    t.text     "level_4_features"
+    t.text     "level_5_features"
+    t.text     "level_6_features"
+    t.text     "level_7_features"
+    t.text     "level_8_features"
+    t.text     "level_9_features"
+    t.text     "level_10_features"
+    t.text     "level_11_features"
+    t.text     "level_12_features"
+    t.text     "level_13_features"
+    t.text     "level_14_features"
+    t.text     "level_15_features"
+    t.text     "level_16_features"
+    t.text     "level_17_features"
+    t.text     "level_18_features"
+    t.text     "level_19_features"
+    t.text     "level_20_features"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "job_classes_skills", id: false, force: true do |t|
+    t.integer "job_class_id", null: false
+    t.integer "skill_id",     null: false
   end
 
   create_table "skills", force: true do |t|

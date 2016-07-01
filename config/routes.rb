@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 	#Casein routes
 	namespace :casein do
+		resources :job_classes
 		resources :abilities
 		resources :backgrounds
 		resources :skills
